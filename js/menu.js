@@ -1,20 +1,21 @@
-const hamburguer = document.querySelector('.hamburguer')
-const menu = document.querySelector('.menu-navegacion')
+const icon = document.querySelector('.navbar-toggler')
+const menu = document.querySelector('.navbar-collapse')
 
 console.log(menu)
-console.log(hamburguer)
+console.log(icon)
 
 
-hamburguer.addEventListener('click', ()=>{
+icon.addEventListener('click', ()=>{
 	menu.classList.toggle("spread")  
-})
+}
 
 
 window.addEventListener('click',e=>{
 	if(menu.classList.contains('spread')
-		&& e.target != menu && e.target != hamburguer ){
-			
+	&& e.target != menu && e.target != icon ){	
 
-		menu.classList.toggle("spread")
-	} 
-})
+
+	menu.classList.toggle("spread")		
+}
+		
+	} )

@@ -5,6 +5,13 @@
 	:root{ /*pseudoclase*/
 		scroll-behavior: smooth;
 	}
+
+	.contenedor {
+    	
+    	margin: auto;
+    	overflow: hidden;
+	}
+
 	p{
 		font-family: principal;
 		font-size: 22px;
@@ -35,8 +42,7 @@
 		padding: 60px 0;
 	}
 
-	.header {
-		
+	.header {	
 		background: url(../img/main.png);
 		width: 100%;
     	height: 650px;
@@ -47,12 +53,11 @@
 
 	.header .textos-header{
     	display: flex;
-    	height: 280px;
+    	height: 550px;
     	width: 100%;
    	 	align-items: center;
     	justify-content: center;
     	text-align: center;
-    	padding-bottom: 3em;
     	flex-direction: column;
 	}
 
@@ -75,59 +80,65 @@
 		font-size: 60px;
     	color:#C70039;
     	font-family: fuente3;
-   		text-align: center;    
+   		text-align: center; 
+   		margin-top: 10px;   
 	}
 
 	.onda{
     	position: absolute;
     	bottom: 0;
     	width: 100%;
+    	height: 180px
 	}
 
-	.header a{
-		color:#d91233;
-		font-family: fuente6;
-		margin-left: 0.3em;
-		font-size: 50px;	
-	}
 
 	/* *******Menu Principal ********/
 
-	.menu-navegacion {
-		width: 100%;
-		margin: 30px;
-		padding: 0 150px;
-		list-style: none;
-		display: inline-block;
-
+	 .navbar-nav a{
+		color:#d91233;
+		font-family: fuente6;
+		font-size: 45px;
+		padding: 	10px;
+		
 	}
-	.menu-navegacion a{
-		justify-content: space-evenly;
-
-	}
-
-	.navigation a img{
-		display: block;
-		padding: 6px 3px;
-	}
-
-	.navigation a:hover{
-		text-decoration: none;
+	.navbar-nav a:hover{
+		color:#D88E82;
 		text-decoration: underline;
 	}
-	.logo{
-		width: 170px;
-		height:180px;
+	.navbar-nav a img{
+		display: block;
 	}
-	.hamburguer{
-		color: transparent;
+	.navbar-nav{
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		background-color:  rgba(247, 247, 247, 0.7) !important;
+		padding: 10px 0;
+		min-width: 50px
 	}
 
+
+	.navbar{
+		padding: 0;
+		margin-left: -20px;
+
+
+	}
+
+	.logo{
+		width: 120px;
+		height:120px;
+	}
+
+	.logo-resp{
+		width: 0;
+		height: 0;
+	}
 
 	/* *******¿Quiénes somos? ********/
 
 	#nosotras{
-		padding-bottom: 40px;
+		padding-bottom: 20px;
 	}
 	.soy p{
 		width: 70%;
@@ -318,14 +329,13 @@
 		font-size: 30px;
 		color: #e08ca2;
 		margin: 0;	
-		filter: drop-shadow(1px 0 5px  #f788a5 );
-		
 	}
 
 	.contactame {
 		display: inline-flex;
     	justify-content: space-evenly;
-    }
+    	padding: 50px 10px;
+	}
 
     .contactame p{
     	margin-left: 15px;
@@ -347,47 +357,54 @@
 
 	.footer{
 	    background: #F28999  ;
-	    padding: 40px 0 30px 0;
+	    padding: 20px 0 30px 0;
 	    margin: auto; 
 	}
-	.contenedor-footer{
-	    display: flex;
+	.contenedor-footer{  
 	    width: 90%;
-	    justify-content: space-evenly;
 	    margin: auto;
 	    padding-bottom: 50px;  
 	}
-	.content-foo{
+	.contenedor-footer{
 	    text-align: center;
+	    padding: 20px 30px;
 	}
-	.content-foo h4:hover{
-		text-decoration: underline;	
-	}
-	.content-foo img:hover{
+	
+	.contenedor-footer img:hover{
 		filter: drop-shadow(5px 3px 5px #fff);
 	}
-	.content-foo h4{
+	.content-logo img:hover{
+		filter: drop-shadow(5px 3px 5px #fff);
+	}
+	.footer-iconos {
+		width: 35px;
+		margin: 10px 20px;
+	}
+	.contenedor-footer h4{
 	    text-align: center;
 	    color: #fff;
 	    margin-bottom: 10px;
 	    font-family: fuente4;
 	    font-size: 40px;
 	}
-	.footer-iconos {
-		width: 60px;
+	.contenedor-footer h4:hover{
+		text-decoration: underline;	
 	}
 	.logo2{
-		width:180px;
-		height:180px;
-
+		width:135px;
+		height:140px;
+	}
+	.content-logo{
+		text-align: center;
+		padding: 10px 0;
 	}
 	.copy .copys{
 	    background-color: #EC4646;
 	    text-align: center;
 	    margin: 20px 0 0 0;
 	    color: #fff;
-	    font-family: fuente5;
-		font-size: 18px;
+	    font-family: mresponsive;
+		font-size: 22px;
 		padding: 15px;		
 	}
 
@@ -440,88 +457,108 @@
 	font-family: fuente7;
 	src:url(One.ttf);
 	}
-
-
-
-/* *******Media Querys 800px********/
-
-	@media screen and (max-width: 800px){
-		
-/* *******Menu Hamburguesa ********/
-
-	.hamburguer{
-		position: fixed;
-		z-index: 0;
-		top: 30px;
-		right: 10px;
-		width: 40px;
-		height: 35px;
-		cursor: pointer;
-		border-radius: 10px;
-		box-shadow: 0 0 6px rgba(0, 0, 0, .5);
-		box-sizing: border-box;
-		background:   #c12d50 ;
-		color: #fff;
-		font-size: 30px;
-		text-align: center;
-		padding-top: 3px;
-
-	}
-	.menu-navegacion{
-		position: fixed;
-		top: 0;
-		right: 0;
-		width: 30vw;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		transition: transform .3s ease-in-out;
-		transform: translate(110%);
-		background-image: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
+	@font-face{
+	font-family: mresponsive;
+	src:url(Mf.otf);
 	}
 
-	.spread{
-		transform: translate(0);
-	}
 
-	.menu-navegacion a{
-		text-decoration: none;
-		padding: 1rem;
-	}
-	
-	.header a{
-		color: #eee6e8;
-		font-family: fuente6;
-		font-size: 40px;
-	}
-	.header a:hover{
-		text-decoration: none;
-		text-decoration: underline;
-	}
 
-	.logo{
-		width: 0px;
-		height:0px;
-	} 
-	.ir-arriba{
-		border-radius: 25%;
-		font-size: 20px;
+
+/* *******Media Querys 900px********/
+@media screen and (max-width: 900px){
+
+.navbar-light .navbar-nav a{
+		font-family: mresponsive;
+		font-size: 25px;
 			
 	}
-	.menu-navegacion{
-		width: 50vw;
-		padding-left: 0;
+
+	.navbar{
+		background-color:  rgba(247, 247, 247, 0.82) !important;
 	}
 
-	.header {
-		height: 500px;
-    	background-size: contain;
+	.navbar-toggler{
+		margin-right: 15px;
+		padding: .25rem .50rem;
 	}
+
+	.bg-light {
+		background-color: rgba(247, 247, 247, 0.82) !important;
+}
+
+	.logo-resp{
+		width: 180px;
+		height: 60px;
+		margin: 10px 50px;
+
+	}
+	.logo{
+		width: 0;
+		height:0;
+	}
+
+.contactame ul{
+		padding-top: 20px;
+		padding-left: 90px;
+		padding-left: 50px;
+	}
+
+	.ubicacion{
+		padding-left: 50px;
+	}	
+}
+
+
+
+
+
+
+
+
+/* *******Media Querys 720px********/
+
+	@media screen and (max-width: 720px){
+
+	.navbar-light .navbar-nav a{
+		font-family: mresponsive;
+		font-size: 25px;
+			
+	}
+
+	.navbar{
+		background-color:  rgba(247, 247, 247, 0.82) !important;
+	}
+
+	.navbar-toggler{
+		margin-right: 15px;
+		padding: .25rem .50rem;
+	}
+
+	.bg-light {
+		background-color: rgba(247, 247, 247, 0.82) !important;
+}
+
+	.logo-resp{
+		width: 180px;
+		height: 60px;
+		margin: 10px 35px;
+
+	}
+
+
+		
+
+	
+
+	.header{
+    	height: 750px; 	
+	}
+
+
 		
 	.textos-header h1{
-		padding-top: 180px;
+		padding-top: 110px;
     	font-size: 70px;
 	}
 
@@ -575,7 +612,10 @@
 		flex-wrap: wrap; 
 		margin-left: 60PX;
 	}
-
+	#cotiza{
+		margin-top: 0;
+	}
+	
 	.Form-Cotiza label{
 		font-size: 18px;
 		padding-bottom: 3px;	
@@ -626,33 +666,37 @@
 		margin-right: auto;
 	}
 
+	.contactame {
+    	display: contents;
+	}
+	.contactame {
+    	padding: 0px 10px;
+	}
 	.contactame p{
-	    margin-left: 10px;
-	    font-size: 18px; 
-	    margin: 0;  
+	    font-size: 18px;   
 	}
 
 	.contactame .contac-icons{
-		width: 50px;
-		padding: 10px;
-		font-size: 20px;
-		color: #e08ca2;
-		margin: 0;	
+		width: 40px;
+		padding: 5px;
+		font-size: 25px;
 	}
 
 	.contactame ul{
-		padding-top: 20px;
 		padding-left: 90px;
-	}
-
-	.ubicacion iframe{
-		width: 500px; 
-		height: 300px;
-		padding: 10px 60px;			
+		
 	}
 	.ubicacion{
 		padding-left: 0;
 	}
+
+	.ubicacion iframe{
+		width: 480px; 
+		height: 250px;
+		padding: 10px 40px;	
+		display: block;		
+	}
+	
 
 	.contenedor-footer{
 		padding: 30px 15px; 
@@ -684,22 +728,184 @@
 /* *******Media Querys 500px********/
 
 @media screen and (max-width: 500px){
-.header {
-		height: 470px;
-    	background-size: cover;
+
+	.ir-arriba{
+		font-size: 20px;
+
+	}
+	.header {
+		height: 400px;	
 	}
 		
 	.textos-header h1{
-    	font-size: 50px;
+    	font-size: 60px;
+    	padding-top: 470px;
+    	margin-bottom:  0;	
 	}
 
 	.textos-header h2{
-	    font-size: 30px;  
+	    font-size: 30px;
+	   	margin-top: 5px;
+		padding-bottom: 570px;
+		padding-top: 10px;
+		padding-left: 0px;
+	}
+	.onda{
+		height: 70px;
 	}
 
 	.titulo {
 		font-size: 40px; 
-		padding-left: 10px;
+		padding: 0 10px;
+	
+	}
+
+	.divide img{
+		width: 130px;
+	}
+
+	p{
+		font-size: 20px;
+	}
+
+	#nosotras{
+		padding-bottom: 20px;
+	}
+
+	.yo2 img{
+	 	width: 100px;
+	 	margin-right: 20px; 
+	}
+
+	.yo img{
+		 width: 95px; 
+		 margin-left: 20px; 
+	}
+
+	.varios-postres h4{
+		font-size: 15px;
+		margin-left: 10px;
+	}
+
+	.postre1 img{
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		margin: 0 30px;
+	}
+
+	.Form-Cotiza label{
+		font-size: 15px;	
+	}
+
+	.Form-Cotiza .custom-file-label{
+		font-size: 6px;
+	}
+	.btn-lg{
+		font-size: 15px;
+		margin-left: -30px;
+	}
+	
+	.card-img-top{
+	    width: 85px;
+	    height: 85px;
+	}
+	
+	.contenido-texto-card p{
+		 font-size: 14px;	 
+	}
+	.divide2 img{
+		width: 150px;
+	}
+	.contactame {
+    	display: contents;
+	}
+	.contactame {
+    	padding: 0px 10px;
+	}
+	.contactame p{
+	    font-size: 18px;   
+	}
+
+	.contactame .contac-icons{
+		width: 40px;
+		padding: 5px;
+		font-size: 25px;
+	}
+
+	.contactame ul{
+		padding-left: 90px;
+		
+	}
+	.ubicacion{
+		padding-left: 0;
+	}
+
+	.ubicacion iframe{
+		width: 480px; 
+		height: 250px;
+		padding: 10px 40px;	
+		display: block;		
+	}
+
+	.contenedor-footer{
+		padding: 25px 15px; 
+	}
+		
+	.contentenedor-footer h4{
+		font-size: 25px;
+	}
+
+	.footer-iconos {
+		width: 30px;
+	}
+
+	.logo2{
+		width:120px;
+		height:120px;
+	}
+		
+	.copy .copys{
+		font-size: 15px;
+		padding: 15px;		
+	}
+}
+
+
+
+/* *******Media Querys 320px********/
+
+@media screen and (max-width: 320px){
+
+	.logo-resp{
+		width: 160px;
+		height: 50px;
+		margin: 10px 30px;
+	}
+
+	.header {
+		height: 400px;	
+	}
+		
+	.textos-header h1{
+    	font-size: 45px;
+    	padding-top: 420px 	
+	}
+
+	.textos-header h2{
+	    font-size: 25px;
+	   	margin-top: 5px;
+		padding-bottom: 570px;
+		padding-top: 10px;
+		padding-left: 0px;
+	}
+	.onda{
+		height: 70px;
+	}
+
+	.titulo {
+		font-size: 35px; 
+		padding: 0 10px;
 	}
 
 	.divide img{
@@ -740,14 +946,16 @@
 	}
 
 	.Form-Cotiza .custom-file-label{
-		font-size: 6px;
+		font-size: 7px;
 	}
 	.btn-lg{
 		font-size: 15px;
 		margin-left: -30px;
 
 	}
-	
+	.background{
+		margin-bottom: 0;
+	}
 	.card-img-top{
 	    width: 85px;
 	    height: 85px;
@@ -759,6 +967,7 @@
 	.divide2 img{
 		width: 150px;
 	}
+
 	.contactame p{
 	    font-size: 13px;   
 	}
@@ -783,7 +992,7 @@
 		padding: 25px 15px; 
 	}
 		
-	.content-foo h4{
+	.contentenedor-footer h4{
 		font-size: 25px;
 	}
 
@@ -792,8 +1001,8 @@
 	}
 
 	.logo2{
-		width:75px;
-		height:75px;
+		width:110px;
+		height:110px;
 	}
 		
 	.copy .copys{
@@ -801,5 +1010,3 @@
 		padding: 15px;		
 	}
 }
-
-		
