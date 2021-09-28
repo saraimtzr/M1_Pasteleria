@@ -1,5 +1,5 @@
 	body{ 
-	
+		
 	}
 
 	:root{ /*pseudoclase*/
@@ -10,7 +10,8 @@
     	
     	margin: auto;
     	overflow: hidden;
-	}
+		padding: 10px 10px;
+		}
 
 	p{
 		font-family: principal;
@@ -39,7 +40,7 @@
 		max-width: 1200px;
 		overflow: hidden;
 		margin: auto;
-		padding: 60px 0;
+		padding: 40px 0;
 	}
 
 	.header {	
@@ -135,6 +136,7 @@
 		height: 0;
 	}
 
+
 	/* *******¿Quiénes somos? ********/
 
 	#nosotras{
@@ -166,10 +168,11 @@
 	.varios-postres{
 		display: inline-block;
 	    float: none!important;
-	    margin-right: -4px;
-	    margin-left: 8px;
 	    vertical-align: top;
 
+	}
+	.cont-postres{
+		text-align: center;
 	}
 
 	.varios-postres h4{
@@ -318,8 +321,11 @@
 	}
 	.contactame ul{
 		list-style: none;
-		padding-top: 80px;
-		padding-left: 150px;
+		align-items: center;
+		padding-left: 0px;
+	}
+	.contactame{
+		text-align: justify-all;
 	}
 
 	.contactame .contac-icons{
@@ -330,27 +336,30 @@
 		color: #e08ca2;
 		margin: 0;	
 	}
-
-	.contactame {
-		display: inline-flex;
-    	justify-content: space-evenly;
-    	padding: 50px 10px;
+	.col .align-items-center{
+		padding-top: 20px;
 	}
-
+	.p-3 {
+    	padding: 0;
+    	margin-bottom: 20px;
+	}
+	
     .contactame p{
     	margin-left: 15px;
     	display: inline-flex;
     	font-size: 20px; 
     	margin: 0;
 	}
-	.ubicacion{
-		padding-left: 100px;
-		display: inline-flex;
-	}
+	
 
 	.ubicacion iframe{
-		width: 400px; 
+		width: 480px; 
 		height: 400px;
+		text-align: center;
+	}
+	.row .gx-5 { 
+    	margin-left: 0;
+    
 	}
 
 	/* *******Footer ********/
@@ -464,49 +473,35 @@
 
 
 
-
 /* *******Media Querys 900px********/
-@media screen and (max-width: 900px){
 
-.navbar-light .navbar-nav a{
+	@media screen and (max-width:991px){
+.navbar{
+		background-color:  rgba(247, 247, 247, 0.82) !important;
+	}
+	.navbar-light .navbar-nav a{
 		font-family: mresponsive;
 		font-size: 25px;
 			
 	}
-
-	.navbar{
-		background-color:  rgba(247, 247, 247, 0.82) !important;
-	}
-
 	.navbar-toggler{
 		margin-right: 15px;
 		padding: .25rem .50rem;
 	}
-
-	.bg-light {
-		background-color: rgba(247, 247, 247, 0.82) !important;
-}
-
+	.logo{
+		width: 0;
+		height:0;
+	}
 	.logo-resp{
 		width: 180px;
 		height: 60px;
 		margin: 10px 50px;
 
 	}
-	.logo{
-		width: 0;
-		height:0;
+	.ir-arriba{
+		font-size: 25px;	
 	}
 
-.contactame ul{
-		padding-top: 20px;
-		padding-left: 90px;
-		padding-left: 50px;
-	}
-
-	.ubicacion{
-		padding-left: 50px;
-	}	
 }
 
 
@@ -514,83 +509,39 @@
 
 
 
+/* *******Media Querys 768px - 991px********/
 
-
-/* *******Media Querys 720px********/
-
-	@media screen and (max-width: 720px){
-
-	.navbar-light .navbar-nav a{
-		font-family: mresponsive;
-		font-size: 25px;
-			
-	}
-
-	.navbar{
-		background-color:  rgba(247, 247, 247, 0.82) !important;
-	}
-
-	.navbar-toggler{
-		margin-right: 15px;
-		padding: .25rem .50rem;
-	}
-
-	.bg-light {
-		background-color: rgba(247, 247, 247, 0.82) !important;
-}
-
-	.logo-resp{
-		width: 180px;
-		height: 60px;
-		margin: 10px 35px;
-
-	}
-
-
-		
-
+@media (min-width: 768px) and (max-width: 991px) {
 	
-
-	.header{
-    	height: 750px; 	
+	.yo2 img{
+	 	width: 210px; 
 	}
 
+	.yo img{
+		 width: 190px;  
+	}
+	.contactame{
+	margin-bottom: 20px;	
+	}
 
+	.ubicacion{	
+		text-align: center;
+	}
+	.col .align-items-center .ubicacion{
+		text-align: center;
+	}
+}
+
+
+
+
+/* *******Media Querys min 576px max-767.98px********/
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
 		
-	.textos-header h1{
-		padding-top: 110px;
-    	font-size: 70px;
-	}
-
-	.textos-header h2{
-	    font-size: 35px;
-	    font-weight: 200px;	
-	    padding-left: 20px;
-	    margin: 1em;
-	    flex-wrap: wrap;
-	}
-
-	.titulo {
-		font-size: 48px; 
-		text-align: center; 
-		flex-wrap: wrap;  
-	}
-
-	.divide img{
-		width: 150px;
-	}
-
-	.divide2 img{
-		width: 150px;
-	}
-
-	p{
-		font-size: 18px;
-		margin: 1em;
-	}
-
-	#nosotras{
-		padding-bottom: 20px;
+	.col-xs-8{ 
+	    margin-top: 30px;
+	    padding-top: 20px ;
 	}
 
 	.yo2 img{
@@ -600,31 +551,60 @@
 	.yo img{
 		 width: 170px;  
 	}
-
-	.varios-postres h4{
-		font-size: 18px;
+	
+	.ubicacion{	
+		text-align: center;
 	}
-
-	.postre1 img{
-		width: 150px;
-		height: 150px;
-		border-radius: 50%;
-		flex-wrap: wrap; 
-		margin-left: 60PX;
+	.row-gx-5 { 
+    	margin-left: 0;
+    
 	}
-	#cotiza{
-		margin-top: 0;
+	.ubicacion iframe{
+		width: 480px; 
+		height: 250px;	
+	}	
+}
+
+
+
+/* *******Media Querys 400-575px********/
+
+@media screen and (min-width: 400px)and (max-width: 575.98px){
+
+	
+	.textos-header{
+		padding-right: 10px;
+	}
+	.divide img{
+		width: 140px;
+	}
+	.titulo{
+		font-size: 50px;
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 	
-	.Form-Cotiza label{
-		font-size: 18px;
-		padding-bottom: 3px;	
+	.yo2 img{
+	 	width: 100px; 
 	}
 
-	.Form-Cotiza .custom-file-label{
-		font-size: 12px;
+	.yo img{
+		 width: 100px;  
 	}
+	.postre1 img {
+    	margin-left: 0;
+    }
+    .varios-postres h4 {
+    	margin-left: 0;
+	}
+	.varios-postres{
+		padding-right: 10px;
+	}
+	.btn-lg{
+		font-size: 15px;
+		margin-left: -30px;
 
+	}
 	.row{
 		width: 95%;
 		margin-top: 20px;
@@ -633,267 +613,63 @@
 	}
 	
 	.col-xs-8{
-	    width: 1000px;
+	    width: 300px;
 	    height: 250px;
 	    margin-top: 30px;
-	    padding-top: 20px ;
 	    margin-right: 50px; 
 	    box-shadow:20px 20px 35px 10px pink;   
 	    margin-left: -30px;     	    
 	}
 
-	.card-img-top{
-	    width: 100px;
-	    height: 100px;
-	    object-fit: cover;
-	    border: 2px solid #ED1535;
-	    border-radius: 50%;
-	    display: block;
-	    margin-left: auto; 
-		margin-right: auto;
-
-	}
-	
 	.contenido-texto-card p{
-		 font-size: 18px;
-		 text-align: center;
-		
+		 font-size: 16px;	
 	}
-	
-	.divide2 img{
-		width: 200px;
-    	margin-left: auto; 
-		margin-right: auto;
-	}
-
-	.contactame {
-    	display: contents;
-	}
-	.contactame {
-    	padding: 0px 10px;
-	}
-	.contactame p{
-	    font-size: 18px;   
-	}
-
-	.contactame .contac-icons{
-		width: 40px;
-		padding: 5px;
-		font-size: 25px;
-	}
-
-	.contactame ul{
-		padding-left: 90px;
-		
-	}
-	.ubicacion{
-		padding-left: 0;
-	}
-
-	.ubicacion iframe{
-		width: 480px; 
-		height: 250px;
-		padding: 10px 40px;	
-		display: block;		
-	}
-	
-
-	.contenedor-footer{
-		padding: 30px 15px; 
-	}
-		
-	.content-foo h4{
-		font-size: 32px;
-	}
-
-	.footer-iconos {
-		width: 40px;
-	}
-
-	.logo2{
-		width:95px;
-		height:95px;
-	}
-		
-	.copy .copys{
-		font-size: 15px;
-		padding: 15px;		
-	}
-}
-
-
-
-
-
-/* *******Media Querys 500px********/
-
-@media screen and (max-width: 500px){
-
-	.ir-arriba{
-		font-size: 20px;
-
-	}
-	.header {
-		height: 400px;	
-	}
-		
-	.textos-header h1{
-    	font-size: 60px;
-    	padding-top: 470px;
-    	margin-bottom:  0;	
-	}
-
-	.textos-header h2{
-	    font-size: 30px;
-	   	margin-top: 5px;
-		padding-bottom: 570px;
-		padding-top: 10px;
-		padding-left: 0px;
-	}
-	.onda{
-		height: 70px;
-	}
-
-	.titulo {
-		font-size: 40px; 
-		padding: 0 10px;
-	
-	}
-
-	.divide img{
-		width: 130px;
-	}
-
 	p{
-		font-size: 20px;
-	}
-
-	#nosotras{
-		padding-bottom: 20px;
-	}
-
-	.yo2 img{
-	 	width: 100px;
-	 	margin-right: 20px; 
-	}
-
-	.yo img{
-		 width: 95px; 
-		 margin-left: 20px; 
-	}
-
-	.varios-postres h4{
-		font-size: 15px;
-		margin-left: 10px;
-	}
-
-	.postre1 img{
-		width: 80px;
-		height: 80px;
-		border-radius: 50%;
-		margin: 0 30px;
-	}
-
-	.Form-Cotiza label{
-		font-size: 15px;	
-	}
-
-	.Form-Cotiza .custom-file-label{
-		font-size: 6px;
-	}
-	.btn-lg{
-		font-size: 15px;
-		margin-left: -30px;
-	}
-	
-	.card-img-top{
-	    width: 85px;
-	    height: 85px;
-	}
-	
-	.contenido-texto-card p{
-		 font-size: 14px;	 
-	}
-	.divide2 img{
-		width: 150px;
-	}
-	.contactame {
-    	display: contents;
-	}
-	.contactame {
-    	padding: 0px 10px;
+		margin: 1em;
 	}
 	.contactame p{
 	    font-size: 18px;   
 	}
-
-	.contactame .contac-icons{
-		width: 40px;
-		padding: 5px;
-		font-size: 25px;
-	}
-
-	.contactame ul{
-		padding-left: 90px;
-		
-	}
-	.ubicacion{
-		padding-left: 0;
-	}
-
 	.ubicacion iframe{
-		width: 480px; 
-		height: 250px;
-		padding: 10px 40px;	
-		display: block;		
+		width: 45c0px; 
+		height: 250px;	
 	}
-
-	.contenedor-footer{
-		padding: 25px 15px; 
+	.p-4 {
+    	padding: 0;
 	}
-		
-	.contentenedor-footer h4{
-		font-size: 25px;
+	.contenedor-footer {
+    	padding: 0;
 	}
-
-	.footer-iconos {
-		width: 30px;
-	}
-
-	.logo2{
-		width:120px;
-		height:120px;
-	}
-		
-	.copy .copys{
-		font-size: 15px;
-		padding: 15px;		
+	.copy .copys {
+    	font-size: 18px;
+    }
+    .logo2 {
+		width: 95px;
+		height: 95px;
 	}
 }
 
 
+/* *******Media Querys 300********/
 
-/* *******Media Querys 320px********/
+@media screen and (min-width: 300px)and (max-width: 399px){
 
-@media screen and (max-width: 320px){
-
+	
 	.logo-resp{
 		width: 160px;
 		height: 50px;
 		margin: 10px 30px;
 	}
-
 	.header {
-		height: 400px;	
-	}
+    	height: 530px;
+    }
 		
 	.textos-header h1{
-    	font-size: 45px;
-    	padding-top: 420px 	
+    	font-size: 65px;
+    	padding-top: 500px 	
 	}
-
 	.textos-header h2{
-	    font-size: 25px;
+	    font-size: 35px;
 	   	margin-top: 5px;
 		padding-bottom: 570px;
 		padding-top: 10px;
@@ -902,24 +678,15 @@
 	.onda{
 		height: 70px;
 	}
-
-	.titulo {
-		font-size: 35px; 
-		padding: 0 10px;
+	.titulo{
+		font-size: 55px;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 
 	.divide img{
-		width: 130px;
+		width: 140px;
 	}
-
-	p{
-		font-size: 15px;
-	}
-
-	#nosotras{
-		padding-bottom: 20px;
-	}
-
 	.yo2 img{
 	 	width: 100px; 
 	}
@@ -927,86 +694,60 @@
 	.yo img{
 		 width: 95px;  
 	}
-
-	.varios-postres h4{
-		font-size: 15px;
-		margin-left: 10px;
-	}
-
-	.postre1 img{
-		width: 80px;
-		height: 80px;
-		border-radius: 50%;
-		margin: 0 30px;
-
-	}
-
-	.Form-Cotiza label{
-		font-size: 15px;	
-	}
-
-	.Form-Cotiza .custom-file-label{
-		font-size: 7px;
-	}
 	.btn-lg{
 		font-size: 15px;
 		margin-left: -30px;
 
 	}
-	.background{
-		margin-bottom: 0;
-	}
-	.card-img-top{
-	    width: 85px;
-	    height: 85px;
+	.row{
+		width: 95%;
+		margin-top: 20px;
+		margin-bottom: 50px;
+		margin-left: 50px;	
 	}
 	
+	.col-xs-8{
+	    width: 380px;
+	    height: 250px;
+	    margin-top: 30px;
+	    margin-right: 50px; 
+	    box-shadow:20px 20px 35px 10px pink;   
+	    margin-left: -30px;     	    
+	}
+
 	.contenido-texto-card p{
-		 font-size: 14px;	 
+		 font-size: 14px;	
 	}
-	.divide2 img{
-		width: 150px;
+	.contenido-texto-card h4 {	
+    	font-size: 18px;
+    }
+	p{
+		margin: 1em;
 	}
-
-	.contactame p{
-	    font-size: 13px;   
-	}
-
 	.contactame .contac-icons{
 		width: 40px;
 		padding: 5px;
 		font-size: 25px;
 	}
-
-	.contactame ul{
-		padding-left: 20px;
+	.contactame p{
+	    font-size: 17px;   
 	}
-
 	.ubicacion iframe{
-		width: 300px; 
-		height: 250px;
-		padding: 10px 30px;			
+		width: 280px; 
+		height: 200px;
+				
 	}
-
-	.contenedor-footer{
-		padding: 25px 15px; 
+	.copy .copys {
+    	font-size: 18px;
+    }
+    .logo2 {
+		width: 95px;
+		height: 95px;
 	}
-		
-	.contentenedor-footer h4{
-		font-size: 25px;
+	.contenedor-footer h4{
+		font-size: 30px;
 	}
-
-	.footer-iconos {
-		width: 25px;
-	}
-
-	.logo2{
-		width:110px;
-		height:110px;
-	}
-		
-	.copy .copys{
-		font-size: 11px;
-		padding: 15px;		
+	.contenedor-footer {
+    padding: 0 30px;
 	}
 }
